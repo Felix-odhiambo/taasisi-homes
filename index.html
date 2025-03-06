@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAASISI HOMES</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>TAASISI HOMES</h1>
+        <p>Success Starts Here</p>
+    
+    </header>
+
+    <!-- PROPERTY LISTINGS -->
+    <section class="properties">
+        <h2>Our Featured Properties</h2>
+        <div class="property-grid">
+            <div class="property">
+                <img src="images/property1.jpg" alt="Luxury Apartment">
+                <h3>Luxury Apartment</h3>
+                <p>$1,200/month - 3 Bed, 2 Bath</p>
+                <button>View Details</button>
+            </div>
+            <div class="property">
+                <img src="images/property2.jpg" alt="Modern Villa">
+                <h3>Modern Villa</h3>
+                <p>$2,500/month - 5 Bed, 3 Bath</p>
+                <button>View Details</button>
+            </div>
+            <div class="property">
+                <img src="images/property3.jpg" alt="Cozy Studio">
+                <h3>Cozy Studio</h3>
+                <p>$800/month - 1 Bed, 1 Bath</p>
+                <button>View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING FORM -->
+    <section class="booking">
+        <h2>Book a Property Viewing</h2>
+        <form id="bookingForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="date" id="date" required>
+            <button type="submit">Book Now</button>
+        </form>
+        <p id="confirmationMessage"></p>
+    </section>
+
+    <!-- GOOGLE MAP -->
+    <section class="map-container">
+        <h2>Find Us</h2>
+        <div id="map"></div>
+    </section>
+
+    <!-- CONTACT US -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@abcproperties.com | Phone: +123 456 789</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Taasisi Homes. All rights reserved.</p>
+    </footer>
+
+    <!-- GOOGLE MAP SCRIPT -->
+    <script async defer 
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap">
+    </script>
+
+</body>
+</html>
