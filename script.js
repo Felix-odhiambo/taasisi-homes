@@ -1,15 +1,35 @@
 // Google Map Initialization
 function initMap() {
-    var location = { lat: -1.2674, lng: 36.8111 }; // Change this to your location
-    var map = new google.maps.Map(document.getElementById('map'), {
+    const location = { lat: -1.2674, lng: 36.8111 }; // Change this to your location
+    const map = new google.maps.Map(document.getElementById('map'), {
         zoom: 15,
         center: location
     });
-    var marker = new google.maps.Marker({ position: location, map: map });
+
+    // Add a marker to the map
+    const marker = new google.maps.Marker({ position: location, map: map });
+    
+    // Handle Google Maps API errors
+    google.maps.event.addListener(map, 'tilesloaded', function() {
+        console.log('Map loaded successfully');
+    });
+    google.maps.event.addListener(map, 'tileserror', function() {
+        console.error('Error loading the map');
+    });
 }
 
 // Booking Form Submission
 document.getElementById('bookingForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    document.getElementById('confirmationMessage').innerText = "Booking confirmed! We will contact you soon.";
+    
+    // Get form data
+    const formData = new FormData(event.target);
+    
+    // Display a confirmation message
+    const confirmationMessage = document.getElementById('confirmationMessage');
+    confirmationMessage.innerText = "Booking confirmed! We will contact you soon.";
+    confirmationMessage.style.display = 'block';
+    
+    // Clear the form
+    event.target.reset();
 });
