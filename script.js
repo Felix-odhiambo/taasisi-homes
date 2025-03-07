@@ -33,3 +33,13 @@ document.getElementById('bookingForm').addEventListener('submit', function(event
     // Clear the form
     event.target.reset();
 });
+
+// Add these new scripts
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.querySelector("nav");
+
+    menuToggle.addEventListener("click", function() {
+        nav.classList.toggle("hidden");
+    });
+});
