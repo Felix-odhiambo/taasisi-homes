@@ -3,77 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TAASISI HOMES</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>CEILO HOMES UGANDA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #800020;
+            color: #FFD700;
+        }
+        header {
+            background-color: #800020;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 10px;
+            max-width: 200px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #FFD700;
+            padding: 10px;
+        }
+        nav a {
+            color: #800020;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .listing {
+            background-color: #fff;
+            color: #000;
+            padding: 15px;
+            margin: 10px auto;
+            border-radius: 10px;
+            max-width: 500px;
+        }
+        .listing img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #800020;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-
-    <!-- HEADER -->
     <header>
-        <h1>TAASISI HOMES</h1>
-        <p>Success Starts Here</p>
-    
+        <img src="ceilo.png"
+        <div>CEILO HOMES UGANDA</div>
     </header>
-
-    <!-- PROPERTY LISTINGS -->
-    <section class="properties">
-        <h2>Our Featured Properties</h2>
-        <div class="property-grid">
-            <div class="property">
-                <img src="images/property1.jpg" alt="Luxury Apartment">
-                <h3>Luxury Apartment</h3>
-                <p>$1,200/month - 3 Bed, 2 Bath</p>
-                <button>View Details</button>
-            </div>
-            <div class="property">
-                <img src="images/property2.jpg" alt="Modern Villa">
-                <h3>Modern Villa</h3>
-                <p>$2,500/month - 5 Bed, 3 Bath</p>
-                <button>View Details</button>
-            </div>
-            <div class="property">
-                <img src="images/property3.jpg" alt="Cozy Studio">
-                <h3>Cozy Studio</h3>
-                <p>$800/month - 1 Bed, 1 Bath</p>
-                <button>View Details</button>
-            </div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Listings</a>
+        <a href="#">Advertise</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="container">
+        <h2>Welcome to CEILO HOMES UGANDA</h2>
+        <p>Your one-stop platform for Airbnb rentals and advertisements in Uganda.</p>
+        
+        <div class="listing">
+            <h3>Beautiful 2-bedroom apartment</h3>
+            <img src="listing1.jpg" alt="2-bedroom apartment">
+            <p>Located in Naalya Kampala - $50/night</p>
         </div>
-    </section>
-
-    <!-- BOOKING FORM -->
-    <section class="booking">
-        <h2>Book a Property Viewing</h2>
-        <form id="bookingForm">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <input type="date" id="date" required>
-            <button type="submit">Book Now</button>
-        </form>
-        <p id="confirmationMessage"></p>
-    </section>
-
-    <!-- GOOGLE MAP -->
-    <section class="map-container">
-        <h2>Find Us</h2>
-        <div id="map"></div>
-    </section>
-
-    <!-- CONTACT US -->
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <p>Email: info@abcproperties.com | Phone: +123 456 789</p>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2025 Taasisi Homes. All rights reserved.</p>
-    </footer>
-
-    <!-- GOOGLE MAP SCRIPT -->
-    <script async defer 
-        src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap">
-    </script>
-
+        
+        <div class="listing">
+            <h3>Luxury 3-bedroom villa</h3>
+            <img src="listing2.jpg" alt="3-bedroom villa">
+            <p>Located in Entebbe - $100/night</p>
+        </div>
+        
+        <div class="listing">
+            <h3>Cozy 1-bedroom studio</h3>
+            <img src="listing3.jpg" alt="1-bedroom studio">
+            <p>Located in Jinja - $30/night</p>
+        </div>
+        
+        <div class="listing">
+            <h3>Spacious 4-bedroom house</h3>
+            <img src="listing4.jpg" alt="4-bedroom house">
+            <p>Located in Mbarara - $80/night</p>
+        </div>
+        
+        <div class="listing">
+            <h3>Budget-friendly shared room</h3>
+            <img src="listing5.jpg" alt="Shared room">
+            <p>Located in Gulu - $15/night</p>
+        </div>
+    </div>
+    <footer>&copy; 2025 CEILO HOMES UGANDA. All rights reserved.</footer>
 </body>
 </html>
