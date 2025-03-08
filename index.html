@@ -52,6 +52,7 @@
             max-width: 100%;
             border-radius: 10px;
             margin-bottom: 10px;
+            cursor: pointer;
         }
         .booking-btn {
             display: inline-block;
@@ -62,6 +63,7 @@
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
+            cursor: pointer;
         }
         footer {
             background-color: #800020;
@@ -70,12 +72,37 @@
             position: relative;
             width: 100%;
         }
+        .booking-form {
+            background-color: #fff;
+            color: #000;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 400px;
+            text-align: left;
+        }
+        .booking-form input, .booking-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .booking-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #800020;
+            color: #FFD700;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo.jpg" alt="Ceilo Homes Uganda Logo" class="logo">
-        <div>CEILO HOMES UGANDA</div>
+        <img src="logo.jpg" alt="CEILO HOMES UGANDA" class="logo">
+        
     </header>
     <nav>
         <a href="#">Home</a>
@@ -88,30 +115,50 @@
         <p>Your one-stop platform for Airbnb rentals and advertisements in Uganda.</p>
         
         <div class="listing">
-            <img src="IMAGES/listing1.jpg" alt="2-bedroom apartment">
-            <img src="IMAGES/listing1_2.jpg" alt="2-bedroom apartment interior">
-            <img src="IMAGES/listing1_3.jpg" alt="2-bedroom apartment balcony">
-            <h3>Beautiful 2-bedroom apartment</h3>
-            <p>Located in Naalya Kampala - 150,000 UGX/night</p>
-            <a href="#" class="booking-btn">Book Now</a>
+            <h3>Featured Listing</h3>
+            <img src="listing1.jpg" alt="House Listing">
+            <p>Beautiful 2-bedroom apartment in Kampala. Fully furnished and close to amenities.</p>
+            <a href="#" class="booking-btn" onclick="toggleBookingForm('booking1')">Book Now</a>
+            <div id="booking1" class="booking-form" style="display: none;">
+                <h3>Book Now</h3>
+                <form action="submit_booking.php" method="post">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    
+                    <label for="checkin">Check-in Date:</label>
+                    <input type="date" id="checkin" name="checkin" required>
+                    
+                    <label for="checkout">Check-out Date:</label>
+                    <input type="date" id="checkout" name="checkout" required>
+                    
+                    <label for="guests">Number of Guests:</label>
+                    <input type="number" id="guests" name="guests" required>
+                    
+                    <label for="requests">Special Requests:</label>
+                    <textarea id="requests" name="requests" rows="4"></textarea>
+                    
+                    <button type="submit">Submit Booking</button>
+                </form>
+            </div>
         </div>
-        
-        <div class="listing">
-            <img src="IMAGES/listing2.jpg" alt="3-bedroom villa">
-            <img src="IMAGES/listing2_2.jpg" alt="3-bedroom villa pool view">
-            <img src="IMAGES/listing2_3.jpg" alt="3-bedroom villa garden">
-            <h3>Luxury 3-bedroom villa</h3>
-            <p>Located in Entebbe - $100/night</p>
-            <a href="#" class="booking-btn">Book Now</a>
-        </div>
-        
-        <div class="listing">
-            <img src="IMAGES/listing3.jpg" alt="1-bedroom studio">
-            <img src="IMAGES/listing3_2.jpg" alt="1-bedroom studio interior">
-            <img src="IMAGES/listing3_3.jpg" alt="1-bedroom studio kitchen">
-            <h3>Cozy 1-bedroom studio</h3>
-            <p>Located in Jinja - $30/night</p>
-            <a href="#" class="booking-btn">Book Now</a>
-        </div>
-        
-        <di
+    </div>
+    <footer>&copy; 2025 CEILO HOMES UGANDA. All rights reserved.</footer>
+    
+    <script>
+        function toggleBookingForm(id) {
+            var form = document.getElementById(id);
+            if (form.style.display === "none") {
+                form.style.display = "block";
+            } else {
+                form.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
